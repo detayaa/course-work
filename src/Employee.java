@@ -1,18 +1,31 @@
 public class Employee {
-    private String name;
-    private String lastName;
-    private String patronymic;
+    private final String name;
+    private final String lastName;
+    private final String patronymic;
     private int department;
     private int salary;
-    private final int id;
+    static int id;
 
-    public Employee(String name,String lastName,String patronymic, int department, int salary, int id) {
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", patronymic='" + patronymic + '\'' +
+                ", department=" + department +
+                ", salary=" + salary +
+                '}';
+
+    }
+
+    public Employee(int id, String name, String lastName, String patronymic, int department, int salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
-        this.id = id;
         this.lastName = lastName;
         this.patronymic = patronymic;
+
+        id++;
     }
 
     public String getName() {
@@ -39,6 +52,11 @@ public class Employee {
         return getId();
     }
 
+    public void setDepartment(int department) {
+        this.department = department;
+    }
 
-
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
 }
