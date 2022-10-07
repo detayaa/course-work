@@ -1,7 +1,7 @@
 public class Employee {
-    private final String name;
-    private final String lastName;
-    private final String patronymic;
+    private String name;
+    private  String lastName;
+    private  String patronymic;
     private int department;
     private int salary;
     static int id;
@@ -18,7 +18,7 @@ public class Employee {
 
     }
 
-    public Employee(int id, String name, String lastName, String patronymic, int department, int salary) {
+    public Employee(String name, String lastName, String patronymic, int department, int salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
