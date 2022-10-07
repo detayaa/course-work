@@ -18,7 +18,7 @@ public class Employee {
 
     }
 
-    public Employee(String name, String lastName, String patronymic, int department, int salary) {
+    public Employee(int id,String name, String lastName, String patronymic, int department, int salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
@@ -29,23 +29,23 @@ public class Employee {
     }
 
     public String getName() {
-        return getName();
+        return name;
     }
 
     public String getLastName() {
-        return getLastName();
+        return lastName;
     }
 
     public String getPatronymic() {
-        return getPatronymic();
+        return patronymic;
     }
 
     public int getDepartment() {
-        return getDepartment();
+        return department;
     }
 
     public int getSalary() {
-        return getSalary();
+        return salary;
     }
 
     public int getId() {
