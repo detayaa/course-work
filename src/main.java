@@ -1,5 +1,5 @@
 public class main {
-    static Employee[] employee = new Employee[5];
+    private static Employee[] employee = new Employee[5];
 
     public static void main(String[] args) {
         allInformations();
@@ -11,20 +11,20 @@ public class main {
 
     }
 
-    public static void allInformations() {
+    private static void allInformations() {
         for (int i = 0; i <= employee.length - 1; i++) {
-            employee[0] = new Employee(0,"Ivan", "Ivanov", "Ivanovich", 1, 30000);
-            employee[1] = new Employee(1,"Stepan", "Stepanov", "Stepanovich", 2, 40000);
-            employee[2] = new Employee(2,"Danil", "Danilov", "Danilovich", 3, 10000);
-            employee[3] = new Employee(3,"Artem", "Artemov", "Artemovich", 4, 60000);
-            employee[4] = new Employee(4,"Maksim", "Maksimov", "Maksimovich", 5, 70000);
+            employee[0] = new Employee(i,"Ivan", "Ivanov", "Ivanovich", 1, 30000);
+            employee[1] = new Employee(i,"Stepan", "Stepanov", "Stepanovich", 2, 40000);
+            employee[2] = new Employee(i,"Danil", "Danilov", "Danilovich", 3, 10000);
+            employee[3] = new Employee(i,"Artem", "Artemov", "Artemovich", 4, 60000);
+            employee[4] = new Employee(i,"Maksim", "Maksimov", "Maksimovich", 5, 70000);
             System.out.println(employee[i]);
 
         }
 
     }
 
-    public static void monthSalary() {
+    private static void monthSalary() {
         int sum = 0;
         for (int i = 0; i <= employee.length - 1; i++) {
             sum += employee[i].getSalary();
@@ -33,7 +33,7 @@ public class main {
         System.out.println("Сумма затрат на зарплату равна " + sum);
     }
 
-    public static void minSalary() {
+    private static void minSalary() {
         int min = employee[0].getSalary();
         String name = null;
         for (int i = 0; i < employee.length; i++) {
@@ -47,7 +47,7 @@ public class main {
         System.out.println("Сотрудник с минимальной зарплатой - " + name);
     }
 
-    public static void maxSalary() {
+    private static void maxSalary() {
         int max = employee[0].getSalary();
         String name = null;
         for (int i = 0; i < employee.length; i++) {
@@ -61,8 +61,8 @@ public class main {
         System.out.println("Сотрудник с максимальной зарплатой - " + name);
     }
 
-    public static void averageSalary() {
-        int average = 0;
+    private static void averageSalary() {
+        float average;
         int sum = 0;
         for (int i = 0; i < employee.length; i++) {
             sum += employee[i].getSalary();
@@ -71,7 +71,7 @@ public class main {
         System.out.println("Среднее значение зарплат " + average);
     }
 
-    public static void fio() {
+    private static void fio() {
         for (int i = 0; i < employee.length; i++) {
             System.out.println(employee[i].getName() + " " + employee[i].getLastName() + " " + employee[i].getPatronymic());
         }
