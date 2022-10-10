@@ -1,7 +1,13 @@
-public class main {
+public class Main {
     private static Employee[] employee = new Employee[5];
 
+
     public static void main(String[] args) {
+        employee[0] = new Employee("Ivan", "Ivanov", "Ivanovich", 1, 30000);
+        employee[1] = new Employee("Stepan", "Stepanov", "Stepanovich", 2, 40000);
+        employee[2] = new Employee("Danil", "Danilov", "Danilovich", 3, 10000);
+        employee[3] = new Employee("Artem", "Artemov", "Artemovich", 4, 60000);
+        employee[4] = new Employee("Maksim", "Maksimov", "Maksimovich", 5, 70000);
         allInformations();
         monthSalary();
         minSalary();
@@ -13,13 +19,8 @@ public class main {
 
     private static void allInformations() {
         for (int i = 0; i <= employee.length - 1; i++) {
-            employee[0] = new Employee(i,"Ivan", "Ivanov", "Ivanovich", 1, 30000);
-            employee[1] = new Employee(i,"Stepan", "Stepanov", "Stepanovich", 2, 40000);
-            employee[2] = new Employee(i,"Danil", "Danilov", "Danilovich", 3, 10000);
-            employee[3] = new Employee(i,"Artem", "Artemov", "Artemovich", 4, 60000);
-            employee[4] = new Employee(i,"Maksim", "Maksimov", "Maksimovich", 5, 70000);
-            System.out.println(employee[i]);
 
+            System.out.println(employee[i]);
         }
 
     }
@@ -67,7 +68,7 @@ public class main {
         for (int i = 0; i < employee.length; i++) {
             sum += employee[i].getSalary();
         }
-        average = sum / employee.length;
+        average = sum % employee.length;
         System.out.println("Среднее значение зарплат " + average);
     }
 

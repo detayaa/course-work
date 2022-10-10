@@ -4,7 +4,7 @@ public class Employee {
     private  String patronymic;
     private int department;
     private int salary;
-    private int id;
+    private static int id = 0;
 
     @Override
     public String toString() {
@@ -18,13 +18,13 @@ public class Employee {
 
     }
 
-    public Employee(int id,String name, String lastName, String patronymic, int department, int salary) {
+    public Employee(String name, String lastName, String patronymic, int department, int salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
         this.lastName = lastName;
         this.patronymic = patronymic;
-
+        id++;
 
     }
 
