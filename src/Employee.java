@@ -24,7 +24,7 @@ public class Employee {
         this.salary = salary;
         this.lastName = lastName;
         this.patronymic = patronymic;
-        id++;
+        this.id = id;
 
     }
 
