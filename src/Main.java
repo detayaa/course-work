@@ -68,7 +68,7 @@ public class Main {
         for (int i = 0; i < employee.length; i++) {
             sum += employee[i].getSalary();
         }
-        average = sum % employee.length;
+        average = sum / employee.length;
         System.out.println("Среднее значение зарплат " + average);
     }
 

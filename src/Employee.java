@@ -4,7 +4,8 @@ public class Employee {
     private  String patronymic;
     private int department;
     private int salary;
-    private static int id = 0;
+    private static int i = 0;
+    private int id;
 
     @Override
     public String toString() {
@@ -24,7 +25,7 @@ public class Employee {
         this.salary = salary;
         this.lastName = lastName;
         this.patronymic = patronymic;
-        this.id = id;
+        this.id = i;
 
     }
 
